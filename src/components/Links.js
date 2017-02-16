@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/Links.css';
 
 class Links extends Component {
   render() {
@@ -14,12 +15,10 @@ class Links extends Component {
 
         </p>
         <form action="" name="ProgressAndThoughts">
-          Links to your work:
-          <p>Shorten URL:</p>
-          <input type="text" name="ShortenURL" placeholder="paste URL"/>
-          <input type="field" name="GitHub" placeholder="github.com/standardhuman..."/>
-          <input type="field" name="Other"placeholder="Paste other URL"/>
-          <button>Save</button>     
+          <input type="text" name="ShortenURL" placeholder="shorten URL"/><br/>
+          <input type="field" name="GitHub" placeholder="github.com/standardhuman..."/><br/>
+          <input type="field" name="Other"placeholder="Paste other URL"/><br/>
+          <button>Save</button>
           <button>Clear</button>
         </form>
       </div>

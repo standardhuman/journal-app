@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
 import NewEntry from './components/NewEntry'
 
 
@@ -12,7 +12,7 @@ class App extends Component {
           <h2>Journal App</h2>
           <NewEntry />
         </div>
-        <p className="App-intro">
+          <p className="App-intro">
         </p>
       </div>
     );

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/Tweet.css';
 
 class Tweet extends Component {
   render() {
@@ -10,11 +11,12 @@ class Tweet extends Component {
 
           </div>
         </div>
-        <p className="Tweet-intro">
-
-        </p>
-        <button>Send Tweet</button>
-        <button>Reset</button>
+        <p className="Tweet-intro"></p>
+        <form action="">
+          <input type="text" name="tweet" placeholder="tweet"/>
+        </form>
+        <button>Send</button>
+        <button>Clear</button>
       </div>
     );
   }
