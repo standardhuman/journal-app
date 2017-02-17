@@ -5,9 +5,9 @@ class DayAndDate extends Component {
   render() {
     return (
       <div className="DayAndDate">
-        <h2>Day And Date</h2>
         <div className="DayAndDate-header">
-          Day 12 February 12, 2017
+          <h3>Day {this.props.day}</h3>
+          {this.props.date}
         </div>
         <p className="DayAndDate-intro">
         </p>

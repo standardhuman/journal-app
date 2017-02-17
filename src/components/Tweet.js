@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../styles/Tweet.css';
 
 class Tweet extends Component {
+
   render() {
     return (
       <div className="Tweet">
@@ -13,7 +14,7 @@ class Tweet extends Component {
         </div>
         <p className="Tweet-intro"></p>
         <form action="">
-          <input type="text" name="tweet" placeholder="tweet"/>
+          <input type="text" name="tweet" placeholder="tweet" defaultValue={this.props.tweet} />
         </form>
         <button>Send</button>
         <button>Clear</button>
