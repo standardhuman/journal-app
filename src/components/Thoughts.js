@@ -7,18 +7,13 @@ class Thoughts extends Component {
     this.state = {
       value: ''
     };
-    this.handleChange = this.handleChange.bind(this)
+    // this.handleChange = this.handleChange.bind(this)
   }
 
-  handleChange(event){
-    const target = event.target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
-    const name = target.name;
-
-    this.setState({
-      [name]: value
-    })
-
+  submitThoughts(event){
+    // set state
+    event.preventDefault()
+    console.log("You submitted your thoughts!");
   }
 
   render() {
@@ -27,15 +22,17 @@ class Thoughts extends Component {
         <h2>Thoughts</h2>
         <div className="Thoughts-header"></div>
 
-        <div className="progress"></div>
+        <div className="thoughts"></div>
 
         <p className="Thoughts-intro"></p>
 
-          <form action="" name="Thoughts">
+          <form action="" name="Thoughts" onSubmit={this.submitThoughts}>
 
+            <input type="text" name="thoughts"  placeholder="Today's thoughts"></input><br/>
+            <button type="submit">Save</button>
 
-            <textarea name="thoughts" cols="40" rows="5" value={this.state.value} placeholder="thoughts"></textarea>
           </form>
+
 
       </div>
     );

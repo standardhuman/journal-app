@@ -6,7 +6,7 @@ class DayAndDate extends Component {
     return (
       <div className="DayAndDate">
         <div className="DayAndDate-header">
-          <h3>Day {this.props.day}</h3>
+          <h3>{this.props.day}</h3>
           {this.props.date}
         </div>
         <p className="DayAndDate-intro">

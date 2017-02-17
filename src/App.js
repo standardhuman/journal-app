@@ -28,7 +28,7 @@ class App extends Component {
   }
 
   url() {
-    return "www.shortendURL.com"
+    return "www.shortLinkToWork.com"
   }
 
   progress() {
@@ -43,7 +43,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <h1>100 Days of Code Log</h1>
-          <NewEntry date={this.date()} day={this.day()} tweet={this.tweet(this.hashTag, this.day(), this.progress(), this.url())}/>
+          <NewEntry date={this.date()} day={this.day()} tweet={this.tweet(this.hashTag, this.day(), this.progress(), this.url())} />
           <PastPosts />
         </div>
           <p className="App-intro">

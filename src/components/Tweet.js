@@ -7,7 +7,7 @@ class Tweet extends Component {
     return (
       <div className="Tweet">
         <div className="Tweet-header">
-          <h2>Tweet</h2>
+          <h3>Tweet</h3>
           <div>
 
           </div>
