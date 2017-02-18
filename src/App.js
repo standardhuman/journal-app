@@ -6,7 +6,13 @@ import PastPosts from './components/PastPosts'
 
 
 class App extends Component {
-
+  constructor(){
+    super()
+    // initial state
+    this.state = {
+      logEntry: {}
+    }
+  }
   date (){
     let date = new Date();
     let dd = date.getDate();

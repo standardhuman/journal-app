@@ -1,31 +1,21 @@
 import React, { Component } from 'react';
 import '../styles/Progress.css';
 
-class Progress extends Component {
-  constructor(){
-    super()
-    this.state = {
-      value: ''
-    };
-    // this.handleChange = this.handleChange.bind(this)
-  }
+class ProgressAndThoughts extends Component {
 
-  // handleChange(event){
-  //   const target = event.target;
-  //   const value = target.type === 'textarea' ? target.checked : target.value;
-  //   const name = target.name;
+  // constructor(){
+  //   super()
   //
-  //   this.setState({
-  //     [name]: value
-  //   })
-  //
+  //   this.submitProgress = this.submitProgress.bind(this)
+  //   this.submitThoughts = this.submitThoughts.bind(this)
   // }
 
   submitProgress(event){
     // set state
     event.preventDefault()
-    console.log("You submitted your progress!");
+    console.log(this);
   }
+
   submitThoughts(event){
     // set state
     event.preventDefault()
@@ -43,12 +33,12 @@ class Progress extends Component {
 
         <p className="Progress-intro"></p>
 
-          <form action="" name="Progress" onSubmit={this.submitProgress}>
-            <input type="text" name="progress" ref={(input) => { this.progressInput = input }}placeholder="Today's progress"></input><br/>
+          <form action="" name="Progress" onSubmit={this.submitProgress.bind(this)}>
+            <input type="text" name="progress" ref={(input) => { this.progressInput = input }} required placeholder="Today's progress"></input><br/>
           </form>
 
           <form action="" name="Thoughts" onSubmit={this.submitThoughts}>
-            <input type="text" name="thoughts"  placeholder="Today's thoughts"></input><br/>
+            <input type="text" name="thoughts"  ref={(input) => { this.thoughtsInput = input }} required placeholder="Today's thoughts"></input><br/>
             <button type="submit">Save</button>
           </form>
 
@@ -57,4 +47,4 @@ class Progress extends Component {
   }
 }
 
-export default Progress
+export default ProgressAndThoughts

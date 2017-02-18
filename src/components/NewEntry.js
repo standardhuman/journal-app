@@ -9,6 +9,19 @@ import Tweet from './Tweet'
 class NewEntry extends Component {
   render() {
 
+    const createEntry(event) {
+      event.preventDefault()
+      console.log("Making a log entry.");
+      const newEntry = {
+        day: this.day.value,
+        date: this.date.value,
+        progress: this.progress.value,
+        thoughts: this.thoughts.value,
+        link: this.links.value,
+        tweet: this.tweet.value
+      }
+    }
+
     return (
       <div className="NewEntry">
         <div className="NewEntry-header">
